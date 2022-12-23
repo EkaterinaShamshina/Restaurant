@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
 const CopyPlugin = require("copy-webpack-plugin");
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -39,6 +40,11 @@ module.exports = {
                     noErrorOnMissing: true,
                 }
             ],
+        }),
+        new ESLintPlugin({
+            context: "src",
+            extensions: [".js"],
+            fix: true
         }),
     ],
     module: {
