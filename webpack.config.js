@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
 const CopyPlugin = require("copy-webpack-plugin");
 const ESLintPlugin = require('eslint-webpack-plugin');
+const PrettierPlugin = require("prettier-webpack-plugin");
 
 module.exports = {
     mode: 'development',
@@ -46,6 +47,7 @@ module.exports = {
             extensions: [".js"],
             fix: true
         }),
+        new PrettierPlugin()
     ],
     module: {
         rules: [
