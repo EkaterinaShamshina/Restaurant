@@ -51,8 +51,8 @@ a {
   &__flex {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
     align-items: center;
+    padding-top: 30px;
   }
   &__text {
     max-width: 616px;
@@ -68,6 +68,48 @@ a {
   &__bg {
     background-color: $bg-gray;
   }
+  &__link {
+    color: $orange;
+    max-width: 230px;
+  }
+  &__image {
+    display: flex;
+  }
+  &__window {
+    background-image: url(../images/main/window.png);
+    background-size: cover;
+    height: 740px;
+    width: 595px;
+    border: 30px solid $black;
+    border-bottom: 0;
+    box-shadow: 0 -30px 0 0 rgba(255, 255, 255, 0.1),
+      30px 0 0 0 rgba(255, 255, 255, 0.1), -30px 0 0 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+  }
+}
+.line1 {
+  background-image: url(../images/main/line1.svg);
+  height: 311px;
+  width: 311px;
+  position: absolute;
+  top: -4px;
+  right: -14px;
+}
+.line2 {
+  background-image: url(../images/main/line2.svg);
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  top: 26px;
+  right: 15px;
+}
+.line3 {
+  background-image: url(../images/main/line3.svg);
+  height: 210px;
+  width: 210px;
+  position: absolute;
+  top: 46px;
+  right: 38px;
 }
 .container {
   max-width: 1360px;
@@ -144,6 +186,69 @@ ul {
     }
     &_P {
       background-image: url(../images/social/P.svg);
+    }
+  }
+}
+.title {
+  color: $white;
+  font-family: $font-cormorant;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 110px;
+  letter-spacing: 0.2px;
+}
+.description {
+  color: $white;
+  letter-spacing: 0.2px;
+}
+.location {
+  margin-top: 100px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &__item {
+    display: flex;
+    gap: 20px;
+    &::before {
+      content: '';
+      display: block;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 83px;
+      width: 83px;
+      background-color: #292e36;
+      border-radius: 100%;
+    }
+    &_locate {
+      &::before {
+        background-image: url(../images/location/location.svg);
+        background-size: 52px 52px;
+      }
+    }
+    &_hours {
+      &::before {
+        background-image: url(../images/location/hours.svg);
+        background-size: 44px 44px;
+      }
+    }
+    &_reservation {
+      &::before {
+        background-image: url(../images/location/reservation.svg);
+        background-size: 39px 39px;
+      }
+    }
+    &_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      letter-spacing: 0.2px;
+    }
+    &_name {
+      font-family: $font-cormorant;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 39px;
     }
   }
 }
