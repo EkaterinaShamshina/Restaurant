@@ -130,6 +130,7 @@ a {
     margin-top: 25px;
     margin-bottom: 35px;
     letter-spacing: 0.2px;
+    flex-basis: 54vw;
     &_flex {
       display: flex;
       justify-content: space-between;
@@ -139,7 +140,8 @@ a {
   }
   &__nav {
     display: flex;
-    gap: 60px;
+    justify-content: space-between;
+    flex-basis: 100%;
   }
   &__item {
     transition: 0.2s;
@@ -166,8 +168,9 @@ ul {
 }
 .social {
   display: flex;
-  gap: 20px;
   height: 23px;
+  flex-basis: 11.5vw;
+  justify-content: space-between;
   &__link {
     display: inline-block;
     width: 24px;
