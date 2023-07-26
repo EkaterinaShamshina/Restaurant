@@ -11,8 +11,6 @@ $bg-orange: rgba(255, 248, 245, 1);
 $bg-gray: rgba(41, 46, 54, 1);
 
 body {
-  font-size: 20px;
-  font-weight: 400;
   color: $gray;
   font-family: $font-josefin;
   letter-spacing: 1.1px;
@@ -33,9 +31,21 @@ a {
     color: $orange;
   }
 }
+h2 {
+  font-family: $font-cormorant;
+  font-weight: 400;
+  font-size: 40px;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
 .title,
 p {
   margin: 0;
+}
+p {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
 }
 .button {
   border: 2px solid #e1b168;
@@ -133,6 +143,7 @@ p {
     align-items: center;
     padding-top: 50px;
     padding-bottom: 50px;
+    font-size: 20px;
   }
   &__navigation {
     display: flex;
@@ -140,7 +151,8 @@ p {
     margin-top: 25px;
     margin-bottom: 35px;
     letter-spacing: 0.2px;
-    flex-basis: 49vw;
+    flex-basis: 41vw;
+    font-size: 20px;
     &_flex {
       display: flex;
       justify-content: space-between;
@@ -179,7 +191,7 @@ ul {
 .social {
   display: flex;
   height: 23px;
-  flex-basis: 11.5vw;
+  flex-basis: 9.5vw;
   justify-content: space-between;
   &__link {
     display: inline-block;
@@ -212,15 +224,13 @@ ul {
 }
 .description {
   color: $white;
-  letter-spacing: 0.2px;
 }
 .location {
   padding-top: 100px;
-  padding-bottom: 60px;
+  margin-bottom: 144px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  background: $beg;
+  justify-content: space-between;
   &__item {
     display: flex;
     gap: 20px;
@@ -233,6 +243,9 @@ ul {
       width: 83px;
       background-color: #292e36;
       border-radius: 100%;
+    }
+    &_description {
+      font-size: 20px;
     }
     &_locate {
       &::before {
@@ -265,4 +278,53 @@ ul {
       line-height: 39px;
     }
   }
+}
+.bg_beg {
+  background-color: $beg;
+}
+.story {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 125px;
+  &__cover {
+    display: flex;
+    width: 100%;
+    max-width: 40.1vw;
+    height: 28.1vw;
+    position: relative;
+    overflow: hidden;
+    & img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      width: 100%;
+      max-width: 40.1vw;
+      height: 28.1vw;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 31vw;
+    margin-top: 9px;
+    &_item {
+      display: flex;
+      flex-direction: column;
+      gap: 29px;
+      &:last-child {
+        gap: 20px;
+      }
+      &_column {
+        display: flex;
+        gap: 20px;
+      }
+    }
+  }
+}
+.sign_image {
+  height: 111px;
+  width: 200px;
 }
