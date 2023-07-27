@@ -31,12 +31,16 @@ a {
     color: $orange;
   }
 }
+.white_text {
+  color: $white;
+}
 h2 {
   font-family: $font-cormorant;
   font-weight: 400;
   font-size: 40px;
   letter-spacing: 0.2px;
   margin: 0;
+  text-transform: capitalize;
 }
 h3.menu_title {
   font-size: 15px;
@@ -44,6 +48,7 @@ h3.menu_title {
   letter-spacing: 3px;
   color: $black;
   margin-bottom: 22px;
+  text-transform: uppercase;
   &::before {
     content: '';
     display: block;
@@ -59,6 +64,15 @@ h3.menu_title {
     background: $orange;
     width: 60px;
     margin: 0;
+  }
+  &_testimonial {
+    color: $white;
+    &::before {
+      width: 141px;
+    }
+    &::after {
+      width: 141px;
+    }
   }
 }
 h4 {
@@ -321,6 +335,9 @@ ul {
 .bg_beg {
   background-color: $beg;
 }
+.bg_black {
+  background-color: $black;
+}
 .story {
   display: flex;
   justify-content: space-between;
@@ -371,7 +388,7 @@ ul {
   display: flex;
   justify-content: space-between;
   &__menu {
-    margin: 140px 0 140px 0;
+    margin: 140px 0 198px 0;
     &_name {
       gap: 8px;
     }
@@ -447,4 +464,12 @@ ul {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+.testimonial {
+  &__text {
+    padding: 123px 0;
+    p {
+      margin-top: 23px;
+    }
+  }
 }
