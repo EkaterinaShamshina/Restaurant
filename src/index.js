@@ -8,7 +8,7 @@ import { Navigation, Pagination } from 'swiper/modules'
 
 // eslint-disable-next-line no-unused-vars
 var swiper = new Swiper('.testimonialsSwiper', {
-  slidesPerView: 2.5,
+  slidesPerView: 2.77,
   spaceBetween: 30,
   pagination: {
     el: '.swiper-pagination',
