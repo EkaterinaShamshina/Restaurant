@@ -41,5 +41,10 @@
   "dependencies": {
     "normalize.css": "^8.0.1",
     "swiper": "^10.0.4"
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off"
+    }
   }
 }
