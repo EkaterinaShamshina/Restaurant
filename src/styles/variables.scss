@@ -105,6 +105,7 @@ h3.menu_title {
   }
   &_service {
     color: $white;
+    margin-top: 0;
     &::before {
       width: 180px;
     }
@@ -720,7 +721,7 @@ ul {
 }
 button.button {
   margin-top: 63px;
-  margin-bottom: 100px;
+  margin-bottom: 140px;
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
@@ -738,8 +739,7 @@ hr {
   &__box {
     display: flex;
     justify-content: space-between;
-    margin-top: 125px;
-    margin-bottom: 176px;
+    margin: 140px 0;
     &_text {
       flex-basis: 25vw;
       & p {
@@ -747,31 +747,32 @@ hr {
       }
     }
     &_list {
-      list-style-type: none;
-      display: flex;
-      justify-content: space-between;
-      gap: 70px;
-      align-items: center;
+      display: grid;
+      gap: 36px;
+      grid-template-columns: repeat(3, 1fr);
     }
   }
   &__item {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 18px;
     align-items: center;
     color: $white;
     font-size: 25px;
     font-family: $font-cormorant;
     font-weight: 400;
     text-align: center;
+    border: 20px solid rgba(50, 56, 65, 1);
+    width: 210px;
+    aspect-ratio: 1.08;
     &::before {
       content: '';
       display: block;
       background-position: center center;
       background-repeat: no-repeat;
-      height: 100px;
-      width: 150px;
-      background-size: 60px 60px;
+      height: 60px;
+      width: 60px;
     }
     &_opened::before {
       background-image: url(/src/images/opened.svg);
